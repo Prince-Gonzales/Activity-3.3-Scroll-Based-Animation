@@ -1,0 +1,154 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background: #1e1a20;
+}
+
+/* html,
+body
+{
+    overflow: hidden;
+} */
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.section
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Cabin', sans-serif;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 7vmin;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+section:nth-child(odd)
+{
+    justify-content: flex-end;
+}
+
+/* Added Feature: Styles for new content sections */
+.section {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+section:nth-child(odd) {
+    align-items: flex-end;
+}
+
+/* Personal Info Styles */
+.personal-info {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+.personal-info .name {
+    font-size: 3vmin;
+    margin-bottom: 0.5rem;
+    color: #ffeded;
+}
+
+.personal-info .subtitle {
+    font-size: 2vmin;
+    text-transform: none;
+    color: #cccccc;
+}
+
+/* Projects Container Styles */
+.projects-container {
+    margin-top: 2rem;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+.project-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 237, 237, 0.05);
+    border-left: 3px solid #ffeded;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background: rgba(255, 237, 237, 0.1);
+    transform: translateX(-10px);
+}
+
+.project-item h3 {
+    font-size: 2.5vmin;
+    margin-bottom: 0.8rem;
+    color: #ffeded;
+}
+
+.project-item p {
+    font-size: 1.8vmin;
+    text-transform: none;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Contact Container Styles */
+.contact-container {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+.contact-item {
+    display: flex;
+    margin-bottom: 1.2rem;
+    font-size: 2.2vmin;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+}
+
+.contact-label {
+    font-weight: bold;
+    margin-right: 1rem;
+    min-width: 150px;
+    color: #ffeded;
+}
+
+.contact-value {
+    text-transform: none;
+    color: #cccccc;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* End of new feature */
